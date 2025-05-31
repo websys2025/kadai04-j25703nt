@@ -33,10 +33,19 @@
 
                 // 商品一覧の表示関数
                 static showItemList(list) {
+                     for (let i = 0; i < list.length; i++) {
+                        const item = list[i];
+                        console.log("id. " + item.id + ", name " + item.name + ", " + item.price + "円, 残り" + item.stock+"個");
+                }
                     console.log("商品は以下の" + Item.number + "種類です。");
 
                     // 配列の内容を項目毎に出力
                     // 課題4-1. ここにコードを書く
+                    
+                     for (let i = 0; i < list.length; i++) {
+                        const item = list[i];
+                        console.log("商品番号: " + item.id + ", 商品名: " + item.name + ", 金額: " + item.price + ", 在庫数: " + item.stock);
+                }
                     console.log(""); // 空行の出力
                 }
                 
@@ -62,6 +71,9 @@
             const btn = new Array(items.length);
 
             // 課題4-1. ここにコード書く
+           for (let i = 0; i < items.length; i++) {
+                item_list[i] = new Item(items[i].name, items[i].price, items[i].stock);
+            }
             // 商品オブジェクトの生成
 
             // 課題4-2. ここにコードを書く
