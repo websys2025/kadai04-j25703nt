@@ -77,6 +77,16 @@
             // 商品オブジェクトの生成
 
             // 課題4-2. ここにコードを書く
+            for (let i = 0; i < item_list.length; i++) {
+                itemArea.innerHTML += `
+                    <tr>
+                        <td>${item_list[i].name}</td>
+                        <td>${item_list[i].price}円</td>
+                        <td id="stock${item_list[i].id}">${item_list[i].stock}個</td>
+                        <td><button id="button${item_list[i].id}">購入</button></td>
+                    </tr>
+             `;
+            }
             // 商品表の作成
 
             // クリックイベント時の購入処理の設定
